@@ -1,15 +1,21 @@
 package sample;
+
 import javafx.event.*;
 import javafx.fxml.FXML;
-import javafx.scene.text.Text;
-import java.io.File;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextArea;
 
 public class Controller {
-    @FXML private Text actiontarget;
+    @FXML private TextArea Input_Infor;
+    @FXML private PasswordField CKey;
 
     @FXML protected void handleSubmitButtonAction(ActionEvent event) {
-        //actiontarget.setText("encypt pressed");
 
+        System.out.println("Your Key is: " + CKey.getText().toString());
+        System.out.println("Your incryption information is: " + Input_Infor.getText().toString());
+        System.out.println("app code working");
+
+        /**
         String key = "godsplanisallway";
         File inputFile = new File("document.txt");
         File encryptedFile = new File("document1.encrypted");
@@ -21,8 +27,6 @@ public class Controller {
         } catch (CryptoException ex) {
             System.out.println(ex.getMessage());
             ex.printStackTrace();
-        }
-
+        } **/
     }
-
 }
